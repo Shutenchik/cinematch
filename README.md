@@ -1,4 +1,3 @@
-````markdown
 # 🎬 CineMatch
 
 CineMatch is a **React + Vite + TypeScript** pet project designed to help users discover and choose movies and TV shows.  
@@ -29,8 +28,8 @@ pnpm install
 
 # 3. Run the development server
 pnpm dev
+
 ```
-````
 
 By default, the project will be available at [http://localhost:5173](http://localhost:5173).
 
