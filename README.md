@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+Поняла 👍 Давай сделаем красивый и понятный **README.md на английском** для твоего приложения. Такой файл сразу будет выглядеть профессионально на GitHub.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 📄 README.md (English version)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+````markdown
+# 🎬 CineMatch
 
-## Expanding the ESLint configuration
+CineMatch is a **React + Vite + TypeScript** pet project designed to help users discover and choose movies and TV shows.  
+The app fetches data from [TMDB API](https://developer.themoviedb.org/) and allows users to search for titles, view details, and manage their personal watchlist.  
+In the future, CineMatch will evolve into an MVP with voting features, authentication, and monetization options.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React 18](https://react.dev/) + [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- State management: React Hooks (`useState`, `useEffect`, `useMemo`)
+- Linting & formatting: ESLint + Prettier
+- Git hooks & commits: Husky + Commitlint (Conventional Commits)
+- API: [TMDB](https://developer.themoviedb.org/reference/intro/getting-started)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# 1. Clone the repository
+git clone git@github.com:Shutenchik/cinematch.git
+cd cinematch
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Run the development server
+pnpm dev
+```
+````
+
+By default, the project will be available at [http://localhost:5173](http://localhost:5173).
+
+---
+
+## 📂 Project Structure
+
+```
+cinematch/
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # App pages (Home, Discover, Watchlist)
+│   ├── hooks/        # Custom React hooks
+│   ├── api/          # TMDB API integration
+│   └── App.tsx       # Root component
+├── public/           # Static assets
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔮 Roadmap
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [ ] Basic movie search with TMDB API
+- [ ] Movie details page (poster, description, rating, trailers)
+- [ ] Watchlist (add/remove movies, mark as watched)
+- [ ] Authentication (Email + Google OAuth)
+- [ ] Voting system for group movie nights
+- [ ] Stripe integration for premium features ("Party Pass")
